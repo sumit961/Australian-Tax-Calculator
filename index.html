@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <!-- Linking external stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles_ball.css">
+</head>
+<body>
+    <!-- Glowing ball container -->
+    <div class="container1">
+        <div class="glowing-ball"></div>
+    </div>
+    
+    <!-- Main content container -->
+    <div class="container glass">
+        <!-- Heading -->
+        <h2 class="glow">Australian Tax Calculator 2024</h2>
+        
+        <!-- Income input field -->
+        <input type="number" id="income" placeholder="Enter Total Income"><br>
+        
+        <!-- Tax calculation button -->
+        <button onclick="calculateTax()">Calculate Tax</button>
+        
+        <!-- Error message for income input -->
+        <div id="incomeError" class="error"></div>
+        
+        <!-- Tax output container -->
+        <div id="taxOutput"></div>
+        
+        <!-- Tax paid input field -->
+        <input type="number" id="taxPaid" placeholder="Enter Tax Paid"><br>
+        
+        <!-- Return calculation button -->
+        <button onclick="calculateDifference()">Calculate Return</button>
+        
+        <!-- Error message for tax paid input -->
+        <div id="taxPaidError" class="error"></div>
+        
+        <!-- Difference output container -->
+        <div id="differenceOutput"></div>
+    </div>
+    
+    <!-- About Me button -->
+    <a class="button-47" role="button" href="/about.html">About Me</a>
+
+    <!-- JavaScript files -->
+    <script src="script.js"></script>
+</body>
+</html>
