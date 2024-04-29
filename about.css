@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url(/1564417.jpg);
+    background-image: url(1564417.jpg);
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(2px); /* Add blur effect */
