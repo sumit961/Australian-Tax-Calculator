@@ -64,6 +64,18 @@
         <!-- Back button -->
         <a class="button-47" href=https://sumit961.github.io/Australian-Tax-Calculator/index.html>Back</a>
     </div>
-    <script src="script.js">
+    <script>
+              document.addEventListener("DOMContentLoaded", function() {
+        const glowingBall = document.querySelector(".glowing-ball");
+      
+        document.addEventListener("mousemove", function(e) {
+          const mouseX = e.clientX;
+          const mouseY = e.clientY;
+      
+          glowingBall.style.left = mouseX + "px";
+          glowingBall.style.top = mouseY + "px";
+        });
+      });
+    </script>
 </body>
 </html>
