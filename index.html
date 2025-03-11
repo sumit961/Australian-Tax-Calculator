@@ -1,56 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tax Calculator</title>
-    <!-- Linking external stylesheets -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Australian Tax Calculator 2024</title>
+
+    <!-- Linking external fonts and stylesheets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="styles_ball.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon (optional for a more modern look) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Modern CSS Reset -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #ffffff; /* Set background to white */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+            background: white; /* White background for the container */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern look */
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+            text-shadow: 0 0 10px #6e7fdb, 0 0 20px #6e7fdb; /* Add a soft glow to the title */
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        input[type="number"],
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 5px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        input[type="number"]:focus,
+        button:focus {
+            border-color: #6e7fdb;
+        }
+
+        button {
+            background-color: #6e7fdb;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3f5bbf;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .button-47 {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #6e7fdb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .button-47:hover {
+            background-color: #3f5bbf;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Glowing ball container -->
-    <div class="container1">
-        <div class="glowing-ball"></div>
-    </div>
-    
     <!-- Main content container -->
-    <div class="container glass">
+    <div class="container">
         <!-- Heading -->
-        <h2 class="glow">Australian Tax Calculator 2024</h2>
-        
+        <h2>Australian Tax Calculator 2024</h2>
+
         <!-- Income input field -->
-        <input type="number" id="income" placeholder="Enter Total Income"><br>
-        
+        <div class="input-group">
+            <label for="income">Total Income:</label>
+            <input type="number" id="income" placeholder="Enter Total Income" aria-label="Income input">
+        </div>
+
         <!-- Tax calculation button -->
         <button onclick="calculateTax()">Calculate Tax</button>
-        
+
         <!-- Error message for income input -->
         <div id="incomeError" class="error"></div>
-        
+
         <!-- Tax output container -->
         <div id="taxOutput"></div>
-        
+
         <!-- Tax paid input field -->
-        <input type="number" id="taxPaid" placeholder="Enter Tax Paid"><br>
-        
+        <div class="input-group">
+            <label for="taxPaid">Tax Paid:</label>
+            <input type="number" id="taxPaid" placeholder="Enter Tax Paid" aria-label="Tax Paid input">
+        </div>
+
         <!-- Return calculation button -->
         <button onclick="calculateDifference()">Calculate Return</button>
-        
+
         <!-- Error message for tax paid input -->
         <div id="taxPaidError" class="error"></div>
-        
+
         <!-- Difference output container -->
         <div id="differenceOutput"></div>
+
+        <!-- About Me button -->
+        <a class="button-47" href="https://sumit961.github.io/Australian-Tax-Calculator/about.html" role="button">About Me</a>
     </div>
-    
-    <!-- About Me button -->
-    <a class="button-47" role="button" href="https://sumit961.github.io/Australian-Tax-Calculator/about.html">About Me</a>
 
     <!-- JavaScript files -->
     <script src="script.js"></script>
 </body>
+
 </html>
